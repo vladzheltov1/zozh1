@@ -1,0 +1,23 @@
+.form{
+    text-align: left;
+}
+.form-label{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.form-field{
+    font-size: 20px;
+    border: #28363E solid 2px;
+}
+.form-field:focus{
+    box-shadow: 2px 2px 0px 2px #28363E;
+    border: #28363E solid 2px;
+}
+.btn-form{
+    font-size: 18px;
+}
+.btn-form:hover{
+    background: #0D6EFD;
+    box-shadow: 2px 2px 0 2px #0B5ED7;
+}

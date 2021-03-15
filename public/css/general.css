@@ -1,0 +1,63 @@
+:root {
+    --green-dark: #4BAE4F;
+    --green-light: #8BC34A;
+    --red: #F44336;
+    --orange: #FF5722;
+    --blue: #039BE5;
+    --dark: #131A1E;
+    /* --lighter: #34383A; */
+    --lighter: #455A64;
+    --violete: #9C27B0;
+    --indigo: #673AB7;
+}
+
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+
+
+    box-sizing: border-box;
+
+    /* font-family: 'Noto Sans', sans-serif; */
+}
+
+.btn {
+    font-weight: 600 !important;
+    display: block !important;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.container-form {
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 0 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width: 500px) {
+
+    .container,
+    .container-form {
+        padding: 0 15px;
+        /* min-width: 440px; */
+    }
+}
+
+.mg-20 {
+    height: 20px;
+}
+
+.fz-36 {
+    font-size: 36px;
+}

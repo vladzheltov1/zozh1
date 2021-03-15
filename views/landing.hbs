@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="/public/css/landing.css">
+
+
+<div class="agreementBlock">
+    <a href="/privacy">Мы используем файлы Cookie</a>
+
+    <div class="agree" onclick="agreed()">
+
+    </div>
+</div>
+
+<div class="intro">
+    <div class="container">
+        <a href="https://unsplash.com/@danotis" target="_blank" class="bg-author">
+            Background photo by @DanOtis
+        </a>
+        <div class="intro-info">
+            <div class="h1 intro-title">
+                <span class="intro-green">З</span>доровый <span class="intro-green">О</span>браз <span
+                    class="intro-green">Ж</span>изни
+            </div>
+            <div class="intro-quote">
+                <span class="intro-green">&#8243;</span>Единственный способ сохранить здоровье — это есть то, чего не
+                хочешь, пить то, чего не любишь, и делать то, что не нравится.<span class="intro-green">&#8243;</span>
+                <div class="mg-20"></div>
+                -Марк Твен
+            </div>
+            <div class="intro-btn">
+                <a href="/start" class="intro-btn-start">Начать</a>
+            </div>
+            <a href="#whatIs" class="intro-btn-down"></a>
+        </div>
+    </div>
+</div>
+
+<div class="whatIs" id="whatIs">
+    <div class="container">
+        <div class="whatIs-inner">
+            <img class="block-img" src="/public/pic/landing/block-pic1.jpg">
+            <div class="blockInfo">
+                <div class="block-title">Что такое HealthyLife?</div>
+                <div class="block-description">
+                    HealthyLife - проект, созданный в рамках тринадцатого областного конкурса компьютерных программ
+                    по профилактике зависимостей от психоактивных веществ
+                    и пропаганде здорового образа жизни среди учащихся образовательных учреждений Тульской области.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weHave">
+    <div class="container">
+        {{!-- <a href="https://unsplash.com/@z734923105" target="_blank" class="bg-author">
+            Background photo by @JerryZhang
+        </a> --}}
+        <div class="weHave-inner">
+            <div class="weHave-title">В программу обучения входят:</div>
+
+            <div class="weHave-blocks">
+                <div class="weHave-info-block">
+                    <img src="/public/icon/book-open.svg" class="weHave-info-block-icon">
+                    Учебные материалы на тему Здорового Образа Жизни
+                </div>
+                <div class="weHave-info-block">
+                    <img src="/public/icon/box.svg" class="weHave-info-block-icon">
+                    Интерактивные упраженения на тему правильного питания, физической активности, а также распорядка дня
+                </div>
+                <div class="weHave-info-block">
+                    <img src="/public/icon/clipboard.svg" class="weHave-info-block-icon">
+                    Рекомендации, касаемые Вашего здоровья и здоровья Вашей семьи
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="whatIs" id="whatIs">
+    <div class="container">
+        <div class="whatIs-inner">
+            <div class="blockInfo">
+                <div class="block-title">В чём состоят цели нашего проекта?</div>
+                <div class="block-description">
+                    Наша главная цели - обучение основам Здорового Образа Жизни, а также пропаганда ЗОЖ среди молодёжи.
+                </div>
+            </div>
+            <img class="block-img" src="/public/pic/landing/block-pic2.jpg">
+        </div>
+    </div>
+</div>
+
+<div class="feedback-block">
+    <div class="container">
+        {{!-- <a href="https://unsplash.com/@luke_pamer" target="_blank" class="bg-author">
+            Background photo by @LukePamer
+        </a> --}}
+        <div class="feedback-inner">
+            <div class="h1 feedback-title">Остались вопросы? Пиши нам!</div>
+            <form method="POST" class="feedback-inner-form">
+                <p>
+                    <label class="feedback-form-text">
+                        ФИО:
+                    </label>
+                    <input type="text" name="name" id="name"
+                        class="form-control feedback-form-field feedback-form-input">
+                </p>
+                <p>
+                    <label class="feedback-form-text">
+                        Ваша почта:
+                    </label>
+                    <input type="text" name="email" id="email"
+                        class="form-control feedback-form-field feedback-form-input">
+                </p>
+                <p>
+                    <label class="feedback-form-text">
+                        Ваше сообщение:
+                    </label>
+                    <textarea name="msg" cols="30" id="msg" rows="5"
+                        class="form-control feedback-form-field feedback-form-textarea"></textarea>
+                </p>
+                <p>
+                    <button type="button" class="btn feedback-form-btn" onclick="sendFeedBack()">Отправить</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-column">
+                <div class="footer-column-title">Автор в соц. сетях</div>
+                <div class="footer-column-content">
+                    <a href="https://vk.com/vladzht" target="_blank" class="footer-column-link footer-column-link-pic">
+                        <img src="/public/icon/sm/logo-vk.svg">
+                        <div class="footer-column-link-text">Вконтакте</div>
+                    </a>
+                    <a href="https://github.com/vladzheltov1" target="_blank"
+                        class="footer-column-link footer-column-link-pic">
+                        <img src="/public/icon/sm/logo-github.svg">
+                        <div class="footer-column-link-text">GitHub</div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-column-title">Навигация</div>
+                <div class="footer-column-content">
+                    <a href="/start" target="_blank" class="footer-column-link footer-column-link-pic">
+                        <div class="footer-column-link-text">Начать</div>
+                    </a>
+                    <a href="/about" target="_blank" class="footer-column-link footer-column-link-pic">
+                        <div class="footer-column-link-text">О проекте</div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-column-title">Заголовок</div>
+                <div class="footer-column-content">
+                    <a href="#" target="_blank" class="footer-column-link footer-column-link-pic">
+                        <div class="footer-column-link-text">Ссылка</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
