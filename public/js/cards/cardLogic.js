@@ -33,6 +33,7 @@ let min = 0;
 
 
 // Main timer
+
 setInterval(function () {
     sec++;
 
@@ -68,6 +69,7 @@ function startTask() {
 
 
 // Sending message
+// P.S unreleased functionality :)
 function msg(text, num) {
 
     // let msg;
@@ -88,22 +90,38 @@ function module(a) {
     return -a;
 }
 
-function getRotationDegrees(obj) {
-    var matrix = obj.css("-webkit-transform") ||
-        obj.css("-moz-transform") ||
-        obj.css("-ms-transform") ||
-        obj.css("-o-transform") ||
-        obj.css("transform");
-    if (matrix !== 'none') {
-        var values = matrix.split('(')[1].split(')')[0].split(',');
-        var a = values[0];
-        var b = values[1];
-        var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
-    } else {
-        var angle = 0;
-    }
-    return (angle < 0) ? angle + 360 : angle;
-}
+// Message for someone surfing this code:
+/* 
+    Hi! I don't know who you are and why you're here, but what i know for sure
+    is that you're interested in what this core does. Now - nothing as it's 
+    commented, but if you uncomment it, you'll get many errors that might scare you.
+    But basicly i wrote this code for something that you'll never see (if i don't get rich).
+
+    I'm writing this message for someone who might probably be interested in it. 
+    If you wish, you can text me to vlad.zheltov1@gmail.com and i will reply :)
+
+    P.S. I don't know why i'm writing it all in English xD
+    
+    -Sincerely yours, the author (Vlad Zheltov)
+*/
+// End of message
+
+// function getRotationDegrees(obj) {
+//     var matrix = obj.css("-webkit-transform") ||
+//         obj.css("-moz-transform") ||
+//         obj.css("-ms-transform") ||
+//         obj.css("-o-transform") ||
+//         obj.css("transform");
+//     if (matrix !== 'none') {
+//         var values = matrix.split('(')[1].split(')')[0].split(',');
+//         var a = values[0];
+//         var b = values[1];
+//         var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+//     } else {
+//         var angle = 0;
+//     }
+//     return (angle < 0) ? angle + 360 : angle;
+// }
 
 
 function task1Click(elem) {

@@ -67,7 +67,8 @@ $(document).ready(function () {
         new Sortable(dragArea2Task2[i], {
             group: 'task2',
             animation: 150,
-            sort: false
+            sort: false,
+            forceFallback: true
         });
     }
 
@@ -115,7 +116,8 @@ $(document).ready(function () {
     for (let i = 0; i < dragArea2Task3.length; i++) {
         new Sortable(dragArea2Task3[i], {
             group: 'task3',
-            animation: 350
+            animation: 350,
+            forceFallback: true
         });
     }
 });

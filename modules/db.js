@@ -1,5 +1,6 @@
 const mysql = require('mysql2');
 
+// Local server
 const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -17,3 +18,5 @@ conn.connect(function(err){
 });
 
 module.exports = conn;
+
+// Technically it works and even logs errors to console, but do i still need it?

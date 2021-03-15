@@ -3,6 +3,17 @@ body {
     user-select: none;
 }
 
+.btn-margin-top{
+    height: 40px;
+    width: 100%;
+}
+
+.btn-next-card{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
 /* All cards page */
 
 .task-title {

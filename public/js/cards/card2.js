@@ -31,11 +31,64 @@ function task1Check() {
         correct = false;
     }
 
-    if(correct === true){
+    if (correct === true) {
         task1Correct();
-    }
-    else{
+    } else {
         task1Wrong();
     }
+
+}
+
+// -------------------//
+// ------Task 2------ //
+// -------------------//
+
+$(document).ready(function () {
+    let area1Task2 = document.querySelector('.task2-frame');
+    let area2Task2 = document.querySelectorAll('.task2Target');
+
+    new Sortable(area1Task2, {
+        group: 'task2Card2',
+        animation: 350
+    });
+
+    for (let i = 0; i < area2Task2.length; i++) {
+        new Sortable(area2Task2[i], {
+            group: 'task2Card2',
+            animation: 350,
+            forceFallback: true
+        });
+    }
+});
+
+function task2Auto(elem) {
+    const answ = ['полезных', 'рациона', 'питательными', 'веществами', 'низкой'];
+    return answ[elem];
+}
+
+function task2Check() {
+    let targets = document.querySelectorAll('.task2Target');
+    let correct = true;
+
+    for (let i = 0; i < targets.length; i++) {
+        if (!targets[i].children[0] || targets[i].children[0].innerHTML != task2Auto(i)) {
+            correct = false;
+            break;
+        }
+    }
+
+    if (correct) {
+        task2Correct();
+    } else {
+        task2Wrong();
+    }
+}
+
+// -------------------//
+// ------Task 3------ //
+// -------------------//
+
+
+function task3Check(){
 
 }

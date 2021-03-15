@@ -10,8 +10,9 @@
         <div class="theory">
             <h2 id="theory-title">Основная теория по теме</h2>
             <article id="theory-text"></article>
-            <br>
-            <button type="button" onclick="startTask()" class="btn btn-primary">Далее</button>
+            
+            <div class="btn-margin-top"></div>
+            <button type="button" onclick="startTask()" class="btn btn-primary btn-next-card">Далее</button>
         </div>
 
         {{!-- CARD-EX start --}}
@@ -33,7 +34,8 @@
                     <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/cola.png"></div>
                 </div>
 
-                <button type="button" class="btn btn-primary btnTask1" onclick="task1Check()">Готово</button>
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask1 btn-next-card" onclick="task1Check()">Готово</button>
 
             </div>
             {{!-- TASK1 end --}}
@@ -42,40 +44,39 @@
             {{!-- TASK2 start --}}
             <div class="task2">
                 <h4 class="task-title">2. Заполните пропуски, перетаскивая нужные слова</h4>
+                <small class="text-muted">В данном задании присутствуют лишние слова, которые не должны быть использованы в тексте.</small>
 
                 <div class="task2-frame" id="task2-frame">
-                    <div class="task2-block" id="task2-block1" draggable="true">профилактику</div>
-                    <div class="task2-block" id="task2-block2" draggable="true">жизни</div>
-                    <div class="task2-block" id="task2-block3" draggable="true">человека</div>
-                    <div class="task2-block" id="task2-block4" draggable="true">укрепление</div>
-                    <div class="task2-block" id="task2-block5" draggable="true">образ</div>
-                    <div class="task2-block" id="task2-block6" draggable="true">развитие</div>
+                    <div class="task2-block" draggable="true">питательными</div>
+                    <div class="task2-block" draggable="true">низкой</div>
+                    <div class="task2-block" draggable="true">высокой</div>
+                    <div class="task2-block" draggable="true">рациона</div>
+                    <div class="task2-block" draggable="true">сахаром</div>
+                    <div class="task2-block" draggable="true">веществами</div>
+                    <div class="task2-block" draggable="true">полезных</div>
                 </div>
 
                 <div class="task2-sentance">
-                    <div class="task2-sentance-text">Здоровый </div>
-                    <div class="task2-sentance-text">образ</div>
-                    <div class="task2-sentance-text">жизни</div>
-                    <div class="task2-sentance-text">(ЗОЖ) - </div>
-                    <div class="task2Target" id="task2Field1"></div>
-                    <div class="task2Target" id="task2Field2"></div>
-                    <div class="task2Target" id="task2Field3"></div>
+                    <div class="task2-sentance-text">Правильное </div>
+                    <div class="task2-sentance-text">питание - </div>
+                    <div class="task2-sentance-text">употребление</div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">продуктов,</div>
+                    <div class="task2-sentance-text">составляющих 80-90%</div>
+                    <div class="task2Target"></div>
                     <div class="task2-sentance-text">,</div>
-                    <div class="task2-sentance-text">направленный</div>
-                    <div class="task2-sentance-text">на</div>
-                    <div class="task2Target" id="task2Field4"></div>
-                    <div class="task2-sentance-text">здоровья, </div>
-                    <div class="task2Target" id="task2Field5"></div>
-                    <div class="task2-sentance-text">болезней и </div>
-                    <div class="task2Target" id="task2Field6"></div>
-                    <div class="task2-sentance-text">человеческого</div>
-                    <div class="task2-sentance-text">организма</div>
-                    <div class="task2-sentance-text">в целом.</div>
+                    <div class="task2-sentance-text">богатых</div>
+                    <div class="task2Target"></div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">,</div>
+                    <div class="task2-sentance-text">а также</div>
+                    <div class="task2-sentance-text">обладающих</div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">калорийностью.</div>
                 </div>
 
-                <div class="btn-reply">
-                    <button type="button" class="btn btn-primary btnTask2" onclick="task2Check()">Готово</button>
-                </div>
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask2 btn-next-card" onclick="task2Check()">Готово</button>
 
             </div>
             {{!-- TASK2 end --}}
