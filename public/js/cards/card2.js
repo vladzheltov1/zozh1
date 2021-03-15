@@ -95,4 +95,5 @@ function task3Check(){
 
 function newFunc(){
     alert("Hello world");
+    console.log("new");
 }
