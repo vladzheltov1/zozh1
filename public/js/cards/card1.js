@@ -120,10 +120,6 @@ $(document).ready(function () {
     }
 });
 
-function text(){
-    
-}
-
 function task3Auto(a, num) {
     const answ1 = ["16:00", "21:30", "7:30", "20:00", "17:00", "15:00"];
     const answ2 = ["15:00", "21:30", "7:30", "20:00", "17:00", "16:00"];
