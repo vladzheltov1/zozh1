@@ -89,8 +89,56 @@ function task2Check() {
 // -------------------//
 
 
-function task3Check(){
+let startSort;
 
+$(document).ready(function(){
+    startSort = document.querySelectorAll('.task3-block-item');
+
+    let area1Task3Card2 = document.querySelector('.task3-blocks-list');
+    let area2Task3Card2 = document.querySelectorAll('.task3-container-match');
+
+    new Sortable(area1Task3Card2, {
+        group: "task3Card2",
+        animation: 300
+    });
+
+    for(let i = 0; i < area2Task3Card2.length; i++){
+        new Sortable(area2Task3Card2[i], {
+            group: "task3Card2",
+            animation: 300
+        });
+    }
+});
+
+function task3Auto(elem, num){
+    return $.inArray(elem, startSort);
 }
 
+function task3Check(){
+    let blocksList = document.querySelector('.task3-blocks-list');
+    let blocks = document.querySelectorAll('.task3-block-item');
+
+    let green = document.querySelector('.task3-goodContainer');
+    let red = document.querySelector('.task3-badContainer');
+
+    let correct = true;
+
+    if(blocksList.children.length > 0 || (green.children.length || red.children.length) != 3){
+        correct = false;
+    }
+    else{
+        for(let i = 0; i < 3; i++){
+            if(task3Auto(blocks[i]) == (1 || 4 || 5)){
+                correct = false;
+            }
+        }
+    }
+
+    if(correct){
+        task3Correct();
+    }
+    else{
+        task3Wrong();
+    }
+}
 

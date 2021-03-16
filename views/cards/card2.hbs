@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/public/css/cards.css">
+<link rel="stylesheet" href="/public/css/card2.css">
 
 <div class="container container-card">
     <div class="card-field" id="card-window">
@@ -24,14 +25,14 @@
                 <h4 class="task-title">1. Выберите полезную и сбалансированную пищу</h4>
 
                 <div class="task1-frame">
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/cakes.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/pepper.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/chicken.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/meatandvegetables.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/soup.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/popcorn.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/salad2.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/cola.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/cakes.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/pepper.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/chicken.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/meatandvegetables.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/soup.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/popcorn.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/salad2.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/cola.png"></div>
                 </div>
 
                 <div class="btn-margin-top"></div>
@@ -64,7 +65,7 @@
                     <div class="task2-sentance-text">продуктов,</div>
                     <div class="task2-sentance-text">составляющих 80-90%</div>
                     <div class="task2Target"></div>
-                    <div class="task2-sentance-text">,</div>
+                    <div class="task2-sentance-text">человека,</div>
                     <div class="task2-sentance-text">богатых</div>
                     <div class="task2Target"></div>
                     <div class="task2Target"></div>
@@ -84,12 +85,23 @@
 
             {{!-- TASK3 start --}}
             <div class="task3">
-                <h4 class="task-title">3. </h4>
-
+                <h4 class="task-title">3. Отсортируйте продукты в правильные контейнеры</h4>
                 <div class="task3-container">
-
+                    <div class="task3-containers">
+                        <div class="task3-container-match task3-goodContainer"></div>
+                        <div class="task3-container-match task3-badContainer"></div>
+                    </div>
+                    <div class="task3-blocks-list">
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/apple.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/hamburger.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/eggplant.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/porridge.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/pizza.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/french-fries.jpg"></div>
+                    </div>
                 </div>
 
+                <div class="btn-margin-top"></div>
                 <button type="button" class="btn btn-primary btnTask3" onclick="task3Check()">Готово</button>
             </div>
             {{!-- TASK3 end --}}
@@ -97,16 +109,11 @@
 
             {{!-- TASK4 start --}}
             <div class="task4">
-                <h4 class="task-title">4. Ответьте на вопрос</h4>
+                <h4 class="task-title">4. Отгадайте загадку</h4>
 
                 <div class="task4-container">
                     <div class="task4-question">
-                        Четвероклассник Миша со своим одноклассником Колей составляют меню.
-                        Каждый из них решил "укомплектовать" корзину с продуктам.
-                        Миша включил в список овощи, фрукты, каши и молочные продукты.
-                        Коля в свою очередь решил, что такое меню неправильное, и помимо этого
-                        решил добавить чипсы, сухарики, лимонады и конфеты. Как ты думаешь, кто
-                        из ребят правильно составил меню и почему?
+                        
                     </div>
                     <div class="task4-options">
                         <div class="form-check form-check-inline">
@@ -158,6 +165,7 @@
                     </div>
                 </div>
 
+                <div class="btn-margin-top"></div>
                 <button type="button" class="btn btn-primary btnTask4" onclick="task4Check()">Готово</button>
             </div>
             {{!-- TASK4 end --}}
@@ -210,6 +218,7 @@
                     </div>
                 </div>
 
+                <div class="btn-margin-top"></div>
                 <button type="button" class="btn btn-primary btnTask5" onclick="task5Check()">Готово</button>
             </div>
             {{!-- TASK5 end --}}

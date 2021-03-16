@@ -1,0 +1,58 @@
+/* TASK 1 */
+.task1-card2-block{
+    padding: 10px;
+}
+
+/* TASK 3 */
+.task3-containers{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.task3-container-match{
+    width: 400px;
+    min-height: 200px;
+
+    padding: 10px;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    border-radius: 20px;
+
+    margin: 10px;
+}
+.task3-badContainer{
+    background: #ffbaba;
+}
+.task3-goodContainer{
+    background: rgb(187, 255, 166);
+}
+
+.task3-blocks-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 10px;
+    border-radius: 20px;
+    background: rgb(180, 240, 255);
+
+    width: 100%;
+    min-height: 50px;
+}
+.task3-block-item{
+    width: 100px;
+    height: 100px;
+    
+    margin: 5px;
+
+    overflow: hidden;
+    
+    border-radius: 20px;
+}
+.task3-block-item>img{
+    height: 100%;
+    width: 100%;
+}

@@ -16,7 +16,7 @@ const router = require('./modules/router');
 
 
 const PORT = process.env.APP_PORT || 3001;
-const IP   = process.env.APP_IP || process.env.APP_IP + 1;
+const IP   = process.env.APP_IP;
 
 
 const app = express();
@@ -26,19 +26,15 @@ const hbs = exhbs({
     extname: 'hbs'
 });
 
+
 app.engine('hbs', hbs);
 app.set('view engine', 'hbs');
 app.use('/public', express.static('public'));
 app.use(cookieParser());
 app.use(router);
 
-// app.use(session({
-//     resave: false,
-//     saveUninitialized: true,
-//     secret: "supersecretwordthatnooneknows"
-// }));
 
-
+// Start app
 function start() {
     try{
         app.listen(PORT, IP, () => {

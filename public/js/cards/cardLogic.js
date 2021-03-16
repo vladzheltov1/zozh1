@@ -152,6 +152,30 @@ function task2Correct(){
     }, 2000);
 }
 
+function task3Correct(){
+    changeScore(100);
+    document.querySelector('.btnTask3').disabled = true;
+    $('.btnTask3').addClass('btn-success');
+
+    correctAnswer();
+
+    setTimeout(function () {
+        showTask4();
+    }, 2000);
+}
+
+function task4Correct(){
+    changeScore(100);
+    document.querySelector('.btnTask4').disabled = true;
+    $('.btnTask4').addClass('btn-success');
+
+    correctAnswer();
+
+    setTimeout(function () {
+        showTask5();
+    }, 2000);
+}
+
 function task1Wrong() {
     $('.btnTask1').addClass('btn-danger');
 

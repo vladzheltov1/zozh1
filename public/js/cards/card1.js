@@ -144,15 +144,7 @@ function task3Check() {
     }
 
     if (correct == true) {
-        changeScore(100);
-        document.querySelector('.btnTask3').disabled = true;
-        $('.btnTask3').addClass('btn-success');
-
-        correctAnswer();
-
-        setTimeout(function () {
-            showTask4();
-        }, 2000)
+        task3Correct();
     } else {
         task3Wrong();
     }
@@ -172,22 +164,10 @@ function task4Check() {
     let options = document.querySelectorAll('.selector');
 
     if (chosen == true && options[0].value == "чипсы" && options[1].value == "сухарики" && options[2].value == "лимонад" && options[3].value == "конфеты") {
-        task4Right();
+        task4Correct();
     } else {
         task4Wrong();
     }
-}
-
-function task4Right() {
-    changeScore(100);
-    document.querySelector('.btnTask4').disabled = true;
-    $('.btnTask4').addClass('btn-success');
-
-    correctAnswer();
-
-    setTimeout(function () {
-        showTask5();
-    }, 2000)
 }
 
 // End task 4
