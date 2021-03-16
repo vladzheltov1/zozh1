@@ -11,7 +11,7 @@
         <div class="theory">
             <h2 id="theory-title">Основная теория по теме</h2>
             <article id="theory-text"></article>
-            
+
             <div class="btn-margin-top"></div>
             <button type="button" onclick="startTask()" class="btn btn-primary btn-next-card">Далее</button>
         </div>
@@ -25,18 +25,27 @@
                 <h4 class="task-title">1. Выберите полезную и сбалансированную пищу</h4>
 
                 <div class="task1-frame">
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/cakes.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/pepper.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/chicken.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/meatandvegetables.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/soup.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/popcorn.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/salad2.png"></div>
-                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img src="/public/pic/cards/card2/task1/cola.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/cakes.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/pepper.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/chicken.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/meatandvegetables.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/soup.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/popcorn.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/salad2.png"></div>
+                    <div class="task1-block task1-card2-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card2/task1/cola.png"></div>
                 </div>
 
                 <div class="btn-margin-top"></div>
-                <button type="button" class="btn btn-primary btnTask1 btn-next-card" onclick="task1Check()">Готово</button>
+                <button type="button" class="btn btn-primary btnTask1 btn-next-card"
+                    onclick="task1Check()">Готово</button>
 
             </div>
             {{!-- TASK1 end --}}
@@ -45,7 +54,8 @@
             {{!-- TASK2 start --}}
             <div class="task2">
                 <h4 class="task-title">2. Заполните пропуски, перетаскивая нужные слова</h4>
-                <small class="text-muted">В данном задании присутствуют лишние слова, которые не должны быть использованы в тексте.</small>
+                <small class="text-muted">В данном задании присутствуют лишние слова, которые не должны быть
+                    использованы в тексте.</small>
 
                 <div class="task2-frame" id="task2-frame">
                     <div class="task2-block" draggable="true">питательными</div>
@@ -77,7 +87,8 @@
                 </div>
 
                 <div class="btn-margin-top"></div>
-                <button type="button" class="btn btn-primary btnTask2 btn-next-card" onclick="task2Check()">Готово</button>
+                <button type="button" class="btn btn-primary btnTask2 btn-next-card"
+                    onclick="task2Check()">Готово</button>
 
             </div>
             {{!-- TASK2 end --}}
@@ -109,57 +120,45 @@
 
             {{!-- TASK4 start --}}
             <div class="task4">
-                <h4 class="task-title">4. Отгадайте загадку</h4>
+                <h4 class="task-title">4. Ответьте на вопрос</h4>
 
                 <div class="task4-container">
                     <div class="task4-question">
-                        
+                        Четвероклассник Миша прочитал в интернете, что соблюдение диеты
+                        помогает людям стать стройными и здоровыми. Он решил проверить это.
+                        Миша решил, что целую неделю будет питаться только фруктами и овощами,
+                        а перед сном съедать творожок. Правильную ли диету выбрал Мишу?
                     </div>
                     <div class="task4-options">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" onclick="showProves()"
-                                name="inlineRadioOptions" id="inlineRadio1" value="misha">
-                            <label class="form-check-label" for="inlineRadio1">Миша</label>
+                            <input class="form-check-input" type="radio" onclick="showProve1()"
+                                name="inlineRadioOptions" id="inlineRadio1" value="yes">
+                            <label class="form-check-label" for="inlineRadio1">Да</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" onclick="showProves()"
-                                name="inlineRadioOptions" id="inlineRadio2" value="kolia">
-                            <label class="form-check-label" for="inlineRadio2">Коля</label>
+                            <input class="form-check-input" type="radio" onclick="showProve2()"
+                                name="inlineRadioOptions" id="inlineRadio2" value="no">
+                            <label class="form-check-label" for="inlineRadio2">Нет</label>
                         </div>
                     </div>
                     <div class="task4-proves">
-                        <div class="task4-prove">
+                        <div class="task4-prove1">
+                            <div class="task4-sentance">
+                                потому что фрукты и овощи полезны для здоровья.
+                            </div>
+                        </div>
+                        <div class="task4-prove2">
                             <div class="task4-sentance">
                                 потому что
                                 <div class="task4Target">
                                     <select class="form-control selector">
                                         <option class="option" value=""></option>
-                                        <option class="option" value="овощи">овощи</option>
-                                        <option class="option" value="чипсы">чипсы</option>
+                                        <option class="option" value="овощи">фрукты</option>
+                                        <option class="option" value="чипсы">овощи</option>
+                                        <option class="option" value="чипсы">творог</option>
                                     </select>
                                 </div>
-                                <div class="task4Target">
-                                    <select class="form-control selector">
-                                        <option class="option"></option>
-                                        <option class="option">сухарики</option>
-                                        <option class="option">фрукты</option>
-                                    </select>
-                                </div>
-                                <div class="task4Target">
-                                    <select class="form-control selector">
-                                        <option class="option"></option>
-                                        <option class="option">лимонад</option>
-                                        <option class="option">каши</option>
-                                    </select>
-                                </div> и
-                                <div class="task4Target">
-                                    <select class="form-control selector">
-                                        <option class="option"></option>
-                                        <option class="option">конфеты</option>
-                                        <option class="option">молочные продукты</option>
-                                    </select>
-                                </div>
-                                - продукты, вредные для организма человека.
+                                не является(ются) полезным(и) продуктом(ами).
                             </div>
                         </div>
                     </div>

@@ -91,7 +91,7 @@ function task2Check() {
 
 let startSort;
 
-$(document).ready(function(){
+$(document).ready(function () {
     startSort = document.querySelectorAll('.task3-block-item');
 
     let area1Task3Card2 = document.querySelector('.task3-blocks-list');
@@ -102,7 +102,7 @@ $(document).ready(function(){
         animation: 300
     });
 
-    for(let i = 0; i < area2Task3Card2.length; i++){
+    for (let i = 0; i < area2Task3Card2.length; i++) {
         new Sortable(area2Task3Card2[i], {
             group: "task3Card2",
             animation: 300
@@ -110,11 +110,11 @@ $(document).ready(function(){
     }
 });
 
-function task3Auto(elem, num){
+function task3Auto(elem, num) {
     return $.inArray(elem, startSort);
 }
 
-function task3Check(){
+function task3Check() {
     let blocksList = document.querySelector('.task3-blocks-list');
     let blocks = document.querySelectorAll('.task3-block-item');
 
@@ -123,22 +123,45 @@ function task3Check(){
 
     let correct = true;
 
-    if(blocksList.children.length > 0 || (green.children.length || red.children.length) != 3){
+    if (blocksList.children.length > 0 || (green.children.length || red.children.length) != 3) {
         correct = false;
-    }
-    else{
-        for(let i = 0; i < 3; i++){
-            if(task3Auto(blocks[i]) == (1 || 4 || 5)){
+    } else {
+        for (let i = 0; i < 3; i++) {
+            if (task3Auto(blocks[i]) == (1 || 4 || 5)) {
                 correct = false;
             }
         }
     }
 
-    if(correct){
+    if (correct) {
         task3Correct();
-    }
-    else{
+    } else {
         task3Wrong();
     }
 }
 
+// -------------------//
+// ------Task 4------ //
+// -------------------//
+
+function showProve1() {
+    $('.task4-proves').css('display', 'block');
+    $('.task4-prove1').css('display', 'block');
+    $('.task4-prove2').css('display', 'none');
+}
+
+function showProve2() {
+    $('.task4-proves').css('display', 'block');
+    $('.task4-prove2').css('display', 'block');
+    $('.task4-prove1').css('display', 'none');
+}
+
+function task4Check() {
+    let chosen = document.querySelector('#inlineRadio1').checked;
+
+    if (chosen) {
+        task4Correct();
+    } else {
+        task4Wrong();
+    }
+}

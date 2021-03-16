@@ -128,7 +128,7 @@ function task1Click(elem) {
     $(elem).toggleClass('task1-block-choosen');
 }
 
-function task1Correct(){
+function task1Correct() {
     document.querySelector('.btnTask1').disabled = true;
     $('.btnTask1').addClass('btn-success');
     changeScore(100);
@@ -140,7 +140,7 @@ function task1Correct(){
     }, 2000);
 }
 
-function task2Correct(){
+function task2Correct() {
     $('.btnTask2').addClass('btn-success');
     document.querySelector('.btnTask2').disabled = true;
     changeScore(100);
@@ -152,7 +152,7 @@ function task2Correct(){
     }, 2000);
 }
 
-function task3Correct(){
+function task3Correct() {
     changeScore(100);
     document.querySelector('.btnTask3').disabled = true;
     $('.btnTask3').addClass('btn-success');
@@ -164,7 +164,7 @@ function task3Correct(){
     }, 2000);
 }
 
-function task4Correct(){
+function task4Correct() {
     changeScore(100);
     document.querySelector('.btnTask4').disabled = true;
     $('.btnTask4').addClass('btn-success');
