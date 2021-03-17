@@ -1,1 +1,248 @@
-text-muted
+<link rel="stylesheet" href="/public/css/cards.css">
+<link rel="stylesheet" href="/public/css/card3.css">
+
+<div class="container container-card">
+    <div class="card-field" id="card-window">
+        <div id="card-black-screen"></div>
+        <div id="card-timer"><span id="timer-min-leftzero">0</span><span id="timer-minute">0</span>:<span
+                id="timer-sec-leftzero">0</span><span id="timer-second">0</span></div>
+        <div class="card-score">Количество очков: <span id="score-amount">0</span></div>
+
+        <div class="theory">
+            <h2 id="theory-title">Основная теория по теме</h2>
+            <article id="theory-text"></article>
+
+            <div class="btn-margin-top"></div>
+            <button type="button" onclick="startTask()" class="btn btn-primary btn-next-card">Далее</button>
+        </div>
+
+        {{!-- CARD-EX start --}}
+        <div class="card-ex">
+
+
+            {{!-- TASK1 start --}}
+            <div class="task1">
+                <h4 class="task-title">1. Выберите футбольный инвентарь</h4>
+
+                <div class="task1-frame">
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/ball.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/rocketka2.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/ball1.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/rocketka.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/american_football.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/net.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/shaiba.png"></div>
+                    <div class="task1-block task1-card3-block" onclick="task1Click(this)"><img
+                            src="/public/pic/cards/card3/task1/ball2.png"></div>
+                </div>
+
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask1 btn-next-card"
+                    onclick="task1Check()">Готово</button>
+
+            </div>
+            {{!-- TASK1 end --}}
+
+
+            {{!-- TASK2 start --}}
+            <div class="task2">
+                <h4 class="task-title">2. Заполните пропуски, перетаскивая нужные слова</h4>
+                <small class="text-muted">В данном задании присутствуют лишние слова, которые не должны быть
+                    использованы в тексте.</small>
+
+                {{!-- Физическая активность - вид двигательной активности, направленной на развитие  навыков и оздоровление человеческого организма в целом. --}}
+
+                <div class="task2-frame" id="task2-frame">
+                    <div class="task2-block">питательными</div>
+                    <div class="task2-block">низкой</div>
+                    <div class="task2-block">высокой</div>
+                    <div class="task2-block">рациона</div>
+                    <div class="task2-block">веществами</div>
+                    <div class="task2-block">полезных</div>
+                </div>
+
+                <div class="task2-sentance">
+                    <div class="task2-sentance-text">Правильное </div>
+                    <div class="task2-sentance-text">питание - </div>
+                    <div class="task2-sentance-text">употребление</div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">продуктов,</div>
+                    <div class="task2-sentance-text">составляющих 80-90%</div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">человека,</div>
+                    <div class="task2-sentance-text">богатых</div>
+                    <div class="task2Target"></div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">,</div>
+                    <div class="task2-sentance-text">а также</div>
+                    <div class="task2-sentance-text">обладающих</div>
+                    <div class="task2Target"></div>
+                    <div class="task2-sentance-text">калорийностью.</div>
+                </div>
+
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask2 btn-next-card"
+                    onclick="task2Check()">Готово</button>
+
+            </div>
+            {{!-- TASK2 end --}}
+
+
+            {{!-- TASK3 start --}}
+            <div class="task3">
+                <h4 class="task-title">3. Отсортируйте продукты в правильные контейнеры</h4>
+                <div class="task3-container">
+                    <div class="task3-containers">
+                        <div class="task3-container-match task3-goodContainer"></div>
+                        <div class="task3-container-match task3-badContainer"></div>
+                    </div>
+                    <div class="task3-blocks-list">
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/apple.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/hamburger.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/eggplant.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/porridge.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/pizza.jpg"></div>
+                        <div class="task3-block-item"><img src="/public/pic/cards/card2/task3/french-fries.jpg"></div>
+                    </div>
+                </div>
+
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask3" onclick="task3Check()">Готово</button>
+            </div>
+            {{!-- TASK3 end --}}
+
+
+            {{!-- TASK4 start --}}
+            <div class="task4">
+                <h4 class="task-title">4. Ответьте на вопрос</h4>
+
+                <div class="task4-container">
+                    <div class="task4-question">
+                        Четвероклассник Миша прочитал в интернете, что соблюдение диеты
+                        помогает людям стать стройными и здоровыми. Он решил проверить это.
+                        Миша решил, что целую неделю будет питаться только фруктами и овощами,
+                        а перед сном съедать творожок. Правильную ли диету выбрал Мишу?
+                    </div>
+                    <div class="task4-options">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" onclick="showProve1()"
+                                name="inlineRadioOptions" id="inlineRadio1" value="yes">
+                            <label class="form-check-label" for="inlineRadio1">Да</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" onclick="showProve2()"
+                                name="inlineRadioOptions" id="inlineRadio2" value="no">
+                            <label class="form-check-label" for="inlineRadio2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="task4-proves">
+                        <div class="task4-prove1">
+                            <div class="task4-sentance">
+                                потому что фрукты и овощи полезны для здоровья.
+                            </div>
+                        </div>
+                        <div class="task4-prove2">
+                            <div class="task4-sentance">
+                                потому что
+                                <div class="task4Target">
+                                    <select class="form-control selector">
+                                        <option class="option" value=""></option>
+                                        <option class="option" value="овощи">фрукты</option>
+                                        <option class="option" value="чипсы">овощи</option>
+                                        <option class="option" value="чипсы">творог</option>
+                                    </select>
+                                </div>
+                                не является(ются) полезным(и) продуктом(ами).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask4" onclick="task4Check()">Готово</button>
+            </div>
+            {{!-- TASK4 end --}}
+
+
+            {{!-- TASK5 start --}}
+            <div class="task5">
+                <h4 class="task-title">5. Перемещайте пункты левого списка, чтобы получились верные словосочетания</h4>
+
+                <div class="task5-inner">
+                    <div class="task5-left">
+                        <div class="task5-list-item drag">
+                            <div class="task5-list-item-text drag-text">Правильное</div>
+                            <div class="triangle-left"></div>
+                        </div>
+                        <div class="task5-list-item drag">
+                            <div class="task5-list-item-text drag-text">Силовые</div>
+                            <div class="triangle-left"></div>
+                        </div>
+                        <div class="task5-list-item drag">
+                            <div class="task5-list-item-text drag-text">Активный</div>
+                            <div class="triangle-left"></div>
+                        </div>
+                        <div class="task5-list-item drag">
+                            <div class="task5-list-item-text drag-text">Занятие</div>
+                            <div class="triangle-left"></div>
+                        </div>
+                        <div class="task5-list-item drag">
+                            <div class="task5-list-item-text drag-text">Диета</div>
+                            <div class="triangle-left"></div>
+                        </div>
+                    </div>
+
+                    <div class="task5-right">
+                        <div class="task5-list-item">
+                            <div class="task5-list-item-text">спортом</div>
+                        </div>
+                        <div class="task5-list-item">
+                            <div class="task5-list-item-text">тренировки</div>
+                        </div>
+                        <div class="task5-list-item">
+                            <div class="task5-list-item-text">питание</div>
+                        </div>
+                        <div class="task5-list-item">
+                            <div class="task5-list-item-text">для похудения</div>
+                        </div>
+                        <div class="task5-list-item">
+                            <div class="task5-list-item-text">образ жизни</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-margin-top"></div>
+                <button type="button" class="btn btn-primary btnTask5" onclick="task5Check()">Готово</button>
+            </div>
+            {{!-- TASK5 end --}}
+
+
+            {{!-- END-CARD start --}}
+            <div class="end-card">
+                <h5 class="end-card-text">Поздравляем! Вы прошли карточку!</h5>
+                <a href="/start" class="btn btn-primary end-card-btn" role="button">Ещё задания</a>
+            </div>
+            {{!-- END-CARD end --}}
+
+
+        </div>
+        {{!-- CARD-EX end --}}
+
+        <div class='intro-window' id='intro-win'>
+            <div class='card-intro-title' id="_title"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"
+    integrity="sha512-5x7t0fTAVo9dpfbp3WtE2N6bfipUwk7siViWncdDoSz2KwOqVC1N9fDxEOzk0vTThOua/mglfF8NO7uVDLRC8Q=="
+    crossorigin="anonymous"></script>
+<script src="/public/js/cards/cardLogic.js"></script>
+<script src="/public/js/cards/card3.js"></script>

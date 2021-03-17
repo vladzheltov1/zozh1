@@ -41,13 +41,13 @@ router.get("/card", function (req, res) {
     res.redirect('/start');
 });
 router.get("/card/1", function (req, res) {
-    res.render('cards/card1', {'title': cardTitle[0] + " - карточка"});
+    res.render('cards/card1', {'title': cardTitle[0] + " (задания)"});
 });
 router.get("/card/2", function (req, res) {
-    res.render('cards/card2', {'title': cardTitle[1] + " - карточка"});
+    res.render('cards/card2', {'title': cardTitle[1] + " (задания)"});
 });
 router.get("/card/3", function (req, res) {
-    res.render('cards/card3', {'title': cardTitle[2] + " - карточка"});
+    res.render('cards/card3', {'title': cardTitle[2] + " (задания)"});
 });
 // router.get("/secret/banana", function (req, res) {
 //     res.render('banana', {'title': "Вращающийся банан 🍌"});
