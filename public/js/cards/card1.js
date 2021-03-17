@@ -60,13 +60,13 @@ $(document).ready(function () {
 
     new Sortable(dragArea1Task2, {
         group: 'task2',
-        animation: 150
+        animation: 300
     });
 
     for (let i = 0; i < dragArea2Task2.length; i++) {
         new Sortable(dragArea2Task2[i], {
             group: 'task2',
-            animation: 150,
+            animation: 300,
             sort: false,
             forceFallback: true
         });
@@ -87,7 +87,6 @@ $(document).ready(function () {
 function task2Check() {
     if ($('#task2Field1').children('#task2-block5').length > 0 &&
         $('#task2Field2').children('#task2-block2').length > 0 &&
-        $('#task2Field3').children('#task2-block3').length > 0 &&
         $('#task2Field4').children('#task2-block4').length > 0 ||
         $('#task2Field4').children('#task2-block6').length > 0 &&
         $('#task2Field5').children('#task2-block1').length > 0 &&
@@ -123,10 +122,10 @@ $(document).ready(function () {
 });
 
 function task3Auto(a, num) {
-    const answ1 = ["16:00", "21:30", "7:30", "20:00", "17:00", "15:00"];
-    const answ2 = ["15:00", "21:30", "7:30", "20:00", "17:00", "16:00"];
+    const answ1 = ["16:00", "21:30", "7:30", "22:00", "17:00"];
+    const answ2 = ["17:00", "21:30", "7:30", "22:00", "16:00"];
 
-    if (num == 1) return answ1[a];
+    if(num == 1) return answ1[a];
 
     return answ2[a];
 }

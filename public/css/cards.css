@@ -622,3 +622,9 @@ th {
 .end-card-btn {
     width: 130px;
 }
+
+.your-result{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}

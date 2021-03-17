@@ -61,3 +61,13 @@ body,
 .fz-36 {
     font-size: 36px;
 }
+
+.color-red{
+    color: #dc3545;
+}
+.color-yellow{
+    color: #ffc107;
+}
+.color-green{
+    color: #198754;
+}

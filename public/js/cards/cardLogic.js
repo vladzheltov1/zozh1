@@ -283,4 +283,18 @@ function showTask5() {
 function endCardShow() {
     $('.task5').remove();
     $('.end-card').css('display', 'flex');
+
+    let score = $('#score-amount').html();
+
+    $('#your-res-amount').html(score);
+
+    if(score <= 200){
+        $('#your-res-amount').addClass('color-red');
+    }
+    else if(score <= 300){
+        $('#your-res-amount').addClass('color-yellow');
+    }
+    else if(score <= 500){
+        $('#your-res-amount').addClass('color-green');
+    }
 }

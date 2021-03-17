@@ -43,12 +43,11 @@
                 <h4 class="task-title">2. Заполните пропуски, перетаскивая нужные слова</h4>
 
                 <div class="task2-frame" id="task2-frame">
-                    <div class="task2-block" id="task2-block1" draggable="true">профилактику</div>
-                    <div class="task2-block" id="task2-block2" draggable="true">жизни</div>
-                    <div class="task2-block" id="task2-block3" draggable="true">человека</div>
-                    <div class="task2-block" id="task2-block4" draggable="true">укрепление</div>
-                    <div class="task2-block" id="task2-block5" draggable="true">образ</div>
-                    <div class="task2-block" id="task2-block6" draggable="true">развитие</div>
+                    <div class="task2-block" id="task2-block1">профилактику</div>
+                    <div class="task2-block" id="task2-block2">жизни</div>
+                    <div class="task2-block" id="task2-block4">укрепление</div>
+                    <div class="task2-block" id="task2-block5">образ</div>
+                    <div class="task2-block" id="task2-block6">развитие</div>
                 </div>
 
                 <div class="task2-sentance">
@@ -58,8 +57,7 @@
                     <div class="task2-sentance-text">(ЗОЖ) - </div>
                     <div class="task2Target" id="task2Field1"></div>
                     <div class="task2Target" id="task2Field2"></div>
-                    <div class="task2Target" id="task2Field3"></div>
-                    <div class="task2-sentance-text">,</div>
+                    <div class="task2-sentance-text">человека,</div>
                     <div class="task2-sentance-text">направленный</div>
                     <div class="task2-sentance-text">на</div>
                     <div class="task2Target" id="task2Field4"></div>
@@ -118,7 +116,7 @@
                             </tr>
 
                             <tr>
-                                <td>Личное время</td>
+                                <td>Сон</td>
                                 <td>
                                     <div class="task3-target"></div>
                                 </td>
@@ -131,23 +129,15 @@
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td>Прогулка с друзьями</td>
-                                <td>
-                                    <div class="task3-target"></div>
-                                </td>
-                            </tr>
-
                         </table>
                     </div>
 
                     <div class="task3-blocks">
-                        <div class="task3-block" draggable="true">16:00</div>
-                        <div class="task3-block" draggable="true">17:00</div>
-                        <div class="task3-block" draggable="true">7:30</div>
-                        <div class="task3-block" draggable="true">21:30</div>
-                        <div class="task3-block" draggable="true">15:00</div>
-                        <div class="task3-block" draggable="true">20:00</div>
+                        <div class="task3-block">16:00</div>
+                        <div class="task3-block">17:00</div>
+                        <div class="task3-block">7:30</div>
+                        <div class="task3-block">21:30</div>
+                        <div class="task3-block">22:00</div>
                     </div>
 
                 </div>
@@ -305,6 +295,7 @@
             {{!-- Card-ex start --}}
             <div class="end-card">
                 <h5 class="end-card-text">Поздравляем! Вы прошли карточку!</h5>
+                <div class="your-result">Ваш результат: <span id="your-res-amount"></span>/500</div>
                 <a href="/start" class="btn btn-primary end-card-btn" role="button">Ещё задания</a>
             </div>
             {{!-- Card-ex end --}}
