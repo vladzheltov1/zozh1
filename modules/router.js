@@ -1,44 +1,45 @@
 const { Router } = require('express');
 
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
-const bodyParser = require('body-parser');
+// const cookieParser = require('cookie-parser');
+// const session = require('express-session');
+// const bodyParser = require('body-parser');
 
-const db = require('../modules/db');
-const conn = require('../modules/db');
+// const db = require('../modules/db');
+// const conn = require('../modules/db');
 
 const router = Router();
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+// const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-// Titles for cards
+
+// Card titles
 const cardTitle = ['Основы Здорового Образа Жизни', 'Мы есть то, что мы едим', 'Движение - жизнь'];
 
 
-// Routes
+// GET Routes
 router.get("/", function (req, res) {
     res.render('landing', {'title': "HealthyLife - твоя жизнь в твоих руках!"});
 });
 router.get("/about", function (req, res) {
-    res.render('about', {'title': "О проекте HealthyLife"});
+    res.render('about', {'title': "О проекте - HealthyLife"});
 });
 router.get("/start", function (req, res) {
-    res.render('start', {'title': "Все Задания"});
+    res.render('start', {'title': "Все Задания - HealthyLife"});
 });
 router.get("/card", function (req, res) {
     res.redirect('/start');
 });
 router.get("/card/1", function (req, res) {
-    res.render('cards/card1', {'title': cardTitle[0] + " (задания)"});
+    res.render('cards/card1', {'title': cardTitle[0] + " (задания) - HealthyLife"});
 });
 router.get("/card/2", function (req, res) {
-    res.render('cards/card2', {'title': cardTitle[1] + " (задания)"});
+    res.render('cards/card2', {'title': cardTitle[1] + " (задания) - HealthyLife"});
 });
 router.get("/card/3", function (req, res) {
-    res.render('cards/card3', {'title': cardTitle[2] + " (задания)"});
+    res.render('cards/card3', {'title': cardTitle[2] + " (задания) - HealthyLife"});
 });
 router.get('/*', function(req, res){
-    res.render('404', {'title': "Ошибка! Страница не найдена!"});
+    res.render('404', {'title': "Ошибка! Страница не найдена! - HealthyLife"});
 });
 
 // router.get("/login", function (req, res) {
@@ -49,13 +50,13 @@ router.get('/*', function(req, res){
 // });
 
 
-// POST
+// POST Routes
 // router.post('/login', function(req, res){
 // });
 
 // router.post('/signup', urlencodedParser, function(req, res){
 // });
 
+
 // Export module
 module.exports = router;
-

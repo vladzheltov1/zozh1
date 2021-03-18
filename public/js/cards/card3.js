@@ -79,3 +79,94 @@ function task2Check() {
         task2Wrong();
     }
 }
+
+// -------------------//
+// ------Task 3------ //
+// -------------------//
+
+$(document).ready(function(){
+    if(window.innerWidth <= 445){
+        $('.turn-phone-alert').css('display', "block");
+        $('.task3-container').css('display', "none");
+        $('.btnTask3').css('display', "none");
+    }
+    else{
+        $('.turn-phone-alert').css('display', "none");
+    }
+});
+
+window.addEventListener('resize', function(){
+    if(window.innerWidth <= 445){
+        $('.turn-phone-alert').css('display', "block");
+        $('.task3-container').css('display', "none");
+        $('.btnTask3').css('display', "none");
+    }
+    else{
+        $('.task3-container').css('display', "block");
+        $('.btnTask3').css('display', "block");
+        $('.turn-phone-alert').css('display', "none");
+    }
+});
+
+function task3Auto(num) {
+    const answ = ['т', 'е', 'н', 'н', 'и', 'с'];
+    return answ[num];
+}
+
+function task3Check() {
+    let letters = document.querySelectorAll('.task3-block-letters-item');
+
+    let correct = true;
+
+    for (let i = 0; i < letters.length; i++) {
+        if (letters[i].value != task3Auto(i)) {
+            correct = false;
+        }
+    }
+
+    if (correct) {
+        task3Correct();
+    } else {
+        task3Wrong();
+    }
+}
+
+// -------------------//
+// ------Task 4------ //
+// -------------------//
+
+function showProve1(){
+    $('.task4-proves').css('display', 'block');
+    $('.task4-prove1').css('display', 'block');
+    $('.task4-prove2').css('display', 'none');
+}
+
+function showProve2(){
+    $('.task4-proves').css('display', 'block');
+    $('.task4-prove2').css('display', 'block');
+    $('.task4-prove1').css('display', 'none');
+}
+
+function task4Check(){
+    let chosen = document.querySelector('#inlineRadio2').checked;
+    let selector = document.querySelector('.selector');
+
+    let correct = true;
+
+
+    if(chosen){
+        if(selector.value != 1 && selector.value != 2){
+            correct = false;
+        }
+    }
+    else{
+        correct = false;
+    }
+
+    if(correct){
+        task4CorrectCard2();
+    }
+    else{
+        task4Wrong();
+    }
+}
