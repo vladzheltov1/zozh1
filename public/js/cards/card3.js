@@ -12,32 +12,70 @@ $(document).ready(function () {
 // -------------------//
 
 
-function task1Check(){
-    let allblocks = $('.task1-block');
-    let elems = $('.task1-block-choosen');
-
-    console.log(allblocks);
-    console.log(elems);
+function task1Check() {
+    let elems = $('.task1-block');
+    let choosen = $('.task1-block-choosen');
 
     let correct = true;
 
-    if (elems.length == 3) {
-        for (let i = 0; i < elems.length; i++) {
-            if ($.inArray(elems[i], allblocks) == (1 || 2 || 3 || 6 || 7)) {
-                correct = false;
-                break;
-            }
-            // console.log($.inArray(elems[i], allblocks));
+    if (choosen.length == 3) {
+        if (!$(elems[0]).hasClass("task1-block-choosen") ||
+            !$(elems[4]).hasClass("task1-block-choosen") ||
+            !$(elems[5]).hasClass("task1-block-choosen")) {
+            correct = false;
         }
     } else {
         correct = false;
     }
 
-    console.log(correct);
+    if (correct === true) {
+        task1Correct();
+    } else {
+        task1Wrong();
+    }
+}
 
-    // if (correct === true) {
-    //     task1Correct();
-    // } else {
-    //     task1Wrong();
-    // }
+// -------------------//
+// ------Task 2------ //
+// -------------------//
+
+$(document).ready(function () {
+    let area1task2Card3 = document.querySelector('.task2-frame');
+    let area2task2Card3 = document.querySelectorAll('.task2Target');
+
+    new Sortable(area1task2Card3, {
+        group: "card3Task2",
+        animation: 300
+    });
+
+    for (let i = 0; i < area2task2Card3.length; i++) {
+        new Sortable(area2task2Card3[i], {
+            group: "card3Task2",
+            animation: 300,
+            forceFallback: true
+        });
+    }
+});
+
+function task2Auto(num) {
+    const answ = ['активности', 'спортивных', 'оздоровление', 'организма'];
+    return answ[num];
+}
+
+function task2Check() {
+    let targets = document.querySelectorAll('.task2Target');
+
+    let correct = true;
+
+    for (let i = 0; i < targets.length; i++) {
+        if (!targets[i].firstChild || targets[i].firstChild.innerHTML != task2Auto(i)) {
+            correct = false;
+        }
+    }
+
+    if (correct) {
+        task2Correct();
+    } else {
+        task2Wrong();
+    }
 }

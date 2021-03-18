@@ -176,11 +176,25 @@ function task4Correct() {
     }, 2000);
 }
 
-function task1Wrong() {
-    $('.btnTask1').addClass('btn-danger');
+function task4CorrectCard2(){
+    changeScore(100);
+    document.querySelector('.btnTask4').disabled = true;
+    $('.btnTask4').addClass('btn-success');
+
+    correctAnswer();
 
     setTimeout(function () {
-        $('.btnTask1').removeClass('btn-danger')
+        endCardShow();
+    }, 2000);
+}
+
+function task1Wrong() {
+    $('.btnTask1').addClass('btn-danger');
+    document.querySelector('.btnTask1').disabled = true;
+
+    setTimeout(function () {
+        $('.btnTask1').removeClass('btn-danger');
+        document.querySelector('.btnTask1').disabled = false;
     }, 2000);
 
     changeScore(-10);
@@ -188,9 +202,11 @@ function task1Wrong() {
 
 function task2Wrong() {
     $('.btnTask2').addClass('btn-danger');
+    document.querySelector('.btnTask2').disabled = true;
 
     setTimeout(function () {
-        $('.btnTask2').removeClass('btn-danger')
+        $('.btnTask2').removeClass('btn-danger');
+        document.querySelector('.btnTask2').disabled = false;
     }, 2000);
 
     changeScore(-10);
@@ -198,9 +214,11 @@ function task2Wrong() {
 
 function task3Wrong() {
     $('.btnTask3').addClass('btn-danger');
+    document.querySelector('.btnTask3').disabled = true;
 
     setTimeout(function () {
-        $('.btnTask3').removeClass('btn-danger')
+        $('.btnTask3').removeClass('btn-danger');
+        document.querySelector('.btnTask3').disabled = false;
     }, 2000);
 
     changeScore(-10);
@@ -208,9 +226,11 @@ function task3Wrong() {
 
 function task4Wrong() {
     $('.btnTask4').addClass('btn-danger');
+    document.querySelector('.btnTask4').disabled = true;
 
     setTimeout(function () {
-        $('.btnTask4').removeClass('btn-danger')
+        $('.btnTask4').removeClass('btn-danger');
+        document.querySelector('.btnTask4').disabled = false;
     }, 2000);
 
     changeScore(-10);
@@ -218,9 +238,11 @@ function task4Wrong() {
 
 function task5Wrong() {
     $('.btnTask5').addClass('btn-danger');
+    document.querySelector('.btnTask5').disabled = true;
 
     setTimeout(function () {
-        $('.btnTask5').removeClass('btn-danger')
+        $('.btnTask5').removeClass('btn-danger');
+        document.querySelector('.btnTask5').disabled = false;
     }, 2000);
 
     changeScore(-10);
@@ -281,6 +303,7 @@ function showTask5() {
 }
 
 function endCardShow() {
+    $('.task4').remove();
     $('.task5').remove();
     $('.end-card').css('display', 'flex');
 

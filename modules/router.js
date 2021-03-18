@@ -17,25 +17,13 @@ const cardTitle = ['Основы Здорового Образа Жизни', '�
 
 // Routes
 router.get("/", function (req, res) {
-    res.render('landing', {'title': "HealthyLife"});
+    res.render('landing', {'title': "HealthyLife - твоя жизнь в твоих руках!"});
 });
-// router.get("/profile", function (req, res) {
-//     res.redirect('/');
-// });
-// router.get("/privacy", function (req, res) {
-//     res.render('policy', {'title': "Политика конфиденциальности"});
-// });
-// router.get("/login", function (req, res) {
-//     res.render('login', {'title': "Вход - HealthyLife"});
-// });
-// router.get("/signup", function (req, res) {
-//     res.render('signup', {'title': "Регистрация - HealthyLife"});
-// });
 router.get("/about", function (req, res) {
-    res.render('about', {'title': "О HealthyLife"});
+    res.render('about', {'title': "О проекте HealthyLife"});
 });
 router.get("/start", function (req, res) {
-    res.render('start', {'title': "Задания"});
+    res.render('start', {'title': "Все Задания"});
 });
 router.get("/card", function (req, res) {
     res.redirect('/start');
@@ -49,32 +37,23 @@ router.get("/card/2", function (req, res) {
 router.get("/card/3", function (req, res) {
     res.render('cards/card3', {'title': cardTitle[2] + " (задания)"});
 });
-// router.get("/secret/banana", function (req, res) {
-//     res.render('banana', {'title': "Вращающийся банан 🍌"});
-// });
-// router.get('/demo', function(req, res){
-//     res.render('demo', {'title': "DEMO!"});
-// });
-// router.get('/updates', function(req, res){
-//     res.render('updates', {'title': "Обновления"});
-// });
 router.get('/*', function(req, res){
-    res.render('404', {'title': "Страница не найдена!"});
+    res.render('404', {'title': "Ошибка! Страница не найдена!"});
 });
 
-
-// router.post('/feedback/send', urlencodedParser, function(req, res){
-//     // if(req.body.name == "" || req.body.email == "" || req.body.msg == ""){
-//     //     res.redirect('/?e=ef');
-//     // }
+// router.get("/login", function (req, res) {
+//     res.render('login', {'title': "Вход - HealthyLife"});
+// });
+// router.get("/signup", function (req, res) {
+//     res.render('signup', {'title': "Регистрация - HealthyLife"});
 // });
 
+
+// POST
 // router.post('/login', function(req, res){
-    
 // });
 
 // router.post('/signup', urlencodedParser, function(req, res){
-    
 // });
 
 // Export module

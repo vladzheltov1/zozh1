@@ -18,11 +18,12 @@ function task1Check() {
     let correct = true;
 
     if (elems.length == 4) {
-        for (let i = 0; i < elems.length; i++) {
-            if ($.inArray(elems[i], allblocks) == (0 || 2 || 5 || 7 || -1)) {
-                correct = false;
-                break;
-            }
+        if (!$(allblocks[1]).hasClass('task1-block-choosen') ||
+            !$(allblocks[3]).hasClass('task1-block-choosen') ||
+            !$(allblocks[4]).hasClass('task1-block-choosen') ||
+            !$(allblocks[6]).hasClass('task1-block-choosen')
+        ) {
+            correct = false;
         }
     } else {
         correct = false;
@@ -157,7 +158,7 @@ function task4Check() {
     let chosen = document.querySelector('#inlineRadio1').checked;
 
     if (chosen) {
-        task4Correct();
+        task4CorrectCard2();
     } else {
         task4Wrong();
     }
