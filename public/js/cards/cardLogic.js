@@ -93,7 +93,7 @@ function module(a) {
 // Message for someone surfing this code:
 /* 
     Hi! I don't know who you are and why you're here, but what i know for sure
-    is that you're interested in what this core does. Now - nothing as it's 
+    is that you're interested in what this code does. Now - nothing as it's 
     commented, but if you uncomment it, you'll get many errors that might scare you.
     But basicly i wrote this code for something that you'll never see (if i don't get rich).
 
